@@ -19,9 +19,9 @@ class TestDBStorage(unittest.TestCase):
                              passwd=getenv('HBNB_MYSQL_PWD'),
                              port=3306,
                              db=getenv('HBNB_MYSQL_DB'))
-        new_user = User(**{'first_name': 'jack',
-                           'last_name': 'bond',
-                           'email': 'jack@bond.com',
+        new_user = User(**{'first_name': 'abdelwahab',
+                           'last_name': 'hamada',
+                           'email': 'abdelwahab.hamada@airbnb.com',
                            'password': 12345})
         cur = db.cursor()
         cur.execute('SELECT COUNT(*) FROM users')

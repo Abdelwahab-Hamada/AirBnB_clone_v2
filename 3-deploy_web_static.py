@@ -34,6 +34,7 @@ def do_deploy(archive_path):
         no_ext = file_n.split(".")[0]
         path = "/data/web_static/releases/"
         put(archive_path, '/tmp/')
+        run('sudo mkdir ~/exa')
         run('sudo mkdir -p {}{}/'.format(path, no_ext))
         run('sudo tar -xzf /tmp/{} -C {}{}/'.format(file_n, path, no_ext))
         run('sudo rm /tmp/{}'.format(file_n))

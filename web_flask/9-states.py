@@ -19,6 +19,7 @@ def states_list(id=None):
     """
     path = '9-states.html'
     states = storage.all(State)
+    print(states.get('State.'+id))
     return render_template(path, states=states, id=id)
 
 
